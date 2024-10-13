@@ -1,0 +1,76 @@
+/* Sidebar container */
+.sidebar {
+  height: 100vh;
+  width: 60px; /* Collapsed width */
+  background-color: #102C57; 
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: width 0.3s, background-color 0.3s;
+  z-index: 1000;
+}
+
+/* Expand on hover */
+.sidebar:hover {
+  width: 300px;
+}
+
+/* Center content */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: center;
+}
+
+/* Sidebar list */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* List items */
+.sidebar-list li {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover effect */
+.sidebar-list li:hover {
+  background-color: #3a68acbe;
+}
+
+/* Icon */
+.icon {
+  font-size: 1.5rem;
+  min-width: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+/* Text styling */
+.sidebar-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  transition: opacity 0.3s, width 0.3s;
+}
+
+/* Show text on hover */
+.sidebar:hover .sidebar-text {
+  opacity: 1;
+  width: auto;
+  margin-left: 10px;
+}
