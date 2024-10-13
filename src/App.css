@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  text-align: center;
+  height: 100vh;
+  width: 100vw; 
+  background-color: #f9f9f9;
+}
+
+/* Header */
+.App-header {
+  background-color: #102C57; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Content area */
+.content {
+  margin-left: 60px; /* Margin when sidebar collapsed */
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s;
+}
+
+/* Adjust margin when sidebar expands */
+.sidebar:hover ~ .content {
+  margin-left: 300px;
+}
+
+/* Error message */
+.error-message {
+  color: red; 
+  margin-top: 10px;
+  font-weight: bold; 
+}
